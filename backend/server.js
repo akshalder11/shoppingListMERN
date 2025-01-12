@@ -13,7 +13,7 @@ app.use(express.json());
 
 //Database connection
 mongoose
-  .connect(process.env.MONGO_URI + "/ListDB", {})
+  .connect(process.env.MONGO_URI, {})
   .then(() => console.log("DB ONLINE!!!"))
   .catch((err) => console.error("UNABLE TO CONNECT DB", err));
 
